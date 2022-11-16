@@ -1,0 +1,172 @@
+<h1>Resultado de Busqueda del Folio: '<small>{{ termino }}</small>'</h1>
+
+
+<div class="alert alert-primary" role="alert" *ngIf="bienes == null ">
+  No se encontraron resultados para la busqueda '{{ termino }}'!
+</div>
+
+<!---->
+
+
+<h3></h3>
+<div class="row" *ngIf="bienes.length == 1 ">
+  <div class="col-12">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+        <p><label class="font-weight-bold" >Año de Afectacion:</label> {{ bienes[0]?.['Año de Afectacion'] }} </p>
+    </div>
+    <div class="form-group col-md-4">
+        <p><label class="font-weight-bold" >Folio:</label> {{ bienes[0]?.Folio }}</p>
+    </div>
+    <div class="form-group col-md-4">
+        <p><label class="font-weight-bold" >Clave CABMS:</label> {{ bienes[0]?.['Clave CABMS']}}</p>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <p><label class="font-weight-bold" >Descripcion:</label> {{ bienes[0]?.['Descripcion CABMS']}}</p>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Valor:</label> {{ bienes[0]?.Valor}}</p>
+    </div>
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Unidad Responsable:</label> {{bienes[0]?.['Unidad Responsable']}}</p>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >No. de Empleado:</label> {{ bienes[0]?.['No Empleado']}}</p>
+    </div>
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Nombre de Empleado:</label> {{ bienes[0]?.['Nombre Empleado']}}</p>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-4">
+        <p><label class="font-weight-bold" >Status del Bien:</label> {{ bienes[0]?.['Status del Bien']}}</p>
+    </div>
+    <div class="form-group col-md-4">
+        <p><label class="font-weight-bold" >Modelo:</label> {{ bienes[0]?.Modelo}}</p>
+    </div>
+    <div class="form-group col-md-4">
+        <p><label class="font-weight-bold" >Serie:</label> {{ bienes[0]?.Serie}}</p>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Marca:</label> {{ bienes[0]?.Marca}}</p>
+    </div>
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Proveedor:</label> {{ bienes[0]?.Proveedor}}</p>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Orden de Compra:</label> {{ bienes[0]?.['Orden de Compra']}}</p>
+    </div>
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >No. de Factura:</label> {{ bienes[0]?.['Numero de Factura']}}</p>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Estado de bien:</label> {{ bienes[0]?.['Estado del Bien']}}</p>
+    </div>
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Tipo de Ingreso:</label> {{ bienes[0]?.['Tipo de Ingreso']}}</p>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <p><label class="font-weight-bold" >Ubicacion:</label> {{ bienes[0]?.Ubicacion}}</p>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Edificio:</label> {{ bienes[0]?.Edificio}}</p>
+    </div>
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Piso:</label> {{ bienes[0]?.Piso}}</p>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Partida Presupuestal:</label> {{ bienes[0]?.['Partida Presupuestal']}}</p>
+    </div>
+    <div class="form-group col-md-6">
+        <p><label class="font-weight-bold" >Subcuenta:</label> {{ bienes[0]?.Subcuenta}}</p>
+    </div>
+</div>
+</div>
+<button  type="button" (click)="exportarAExcell()" class="btn btn-primary">Generar Excell</button>
+
+</div>
+
+<!--
+<div class="alert alert-primary" role="alert">
+  Excell generado
+</div>
+-->
+
+
+<div class="row" *ngIf="bienes.length > 1 ">
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre de Empleado</th>
+            <th scope="col">Numero de Empleado</th>
+            <th scope="col">Folio de Bien</th>
+            <th scope="col">Descripcion del bien</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bien of bienes;let i=index">
+            <th scope="row">{{ i+1 }}</th>
+            <td>{{ bien['Nombre Empleado'] }}</td>
+            <td>{{ bien['No Empleado']}}</td>
+            <td>{{ bien.Folio }}</td>
+            <td>{{ bien['Descripcion CABMS']}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button  type="button" (click)="exportarAExcell()" class="btn btn-primary">Generar Excell</button>
+</div>
+
+<!--
+<table class="table" *ngIf="bienes.length > 0">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Inventario</th>
+      <th scope="col">Folio</th>
+      <th scope="col">Clave CAMBS</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Valor</th>
+      <th scope="col">Unidad Administrativa</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let bien of bienes; let i = index">
+      <th scope="row">{{ bien.INVENTARIO}}</th>
+      <td>{{ bien.FOLIO }}</td>
+      <td>{{ bien.CLAVECABMS }}</td>
+      <td>{{ bien.DESC_CABMS }}</td>
+      <td>{{ bien.VALOR }}</td>
+      <td>{{ bien.DESC_UA }}</td>
+      <td>
+        -->
+        <!--<a [routerLink]="['/ua', i]">Editar</a>-->
+        <!--
+        <button  type="button" (click)="exportarAExcell()" class="btn btn-primary">Generar Excell</button>
+        | <a href="http://">Eliminar</a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+-->

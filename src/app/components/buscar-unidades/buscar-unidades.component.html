@@ -1,0 +1,31 @@
+<h1>Resultado de Busqueda de: '<small>{{ termino }}</small>'</h1>
+
+
+<div class="alert alert-primary" role="alert" *ngIf="uas.length == 0">
+  No se encontraron resultados para la busqueda '{{ termino }}'!
+</div>
+
+<table class="table" *ngIf="uas.length > 0">
+  <thead class="thead-dark">
+    <tr>
+      
+      <th scope="col">Clave de U.R</th>
+      <th scope="col">Clave de U.R SAI</th>
+      <th scope="col">Clave de U.R SMAI</th>
+      <th scope="col">Nombre de U.R</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let ua of uas; let i = index">
+      
+      <td>{{ ua.clave_ur }}</td>
+      <td>{{ ua.clave_ur_sai }}</td>
+      <td>{{ ua.clave_ur_smai }}</td>
+      <td>{{ ua.nombre }}</td>
+      
+    </tr>
+
+  </tbody>
+</table>

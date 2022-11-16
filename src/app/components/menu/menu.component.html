@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-3">
+        <div class="list-group">
+            <h6>>>Busqueda</h6>
+            <a [routerLink]="['busqueda-bienes']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bx-search-alt-2'></i> Busqueda de Bienes</a>
+            <h6>>>Catalogos</h6>
+            <a [routerLink]="['uas']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bxs-flag-alt'></i> Unidades Administrativas</a>
+            <a [routerLink]="['cargar_altas']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bx-up-arrow-alt'></i> Cargar Altas</a>
+            <a [routerLink]="['pisos']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bx-down-arrow-alt' ></i> Cargar Bajas</a>
+            <a [routerLink]="['clases_bienes']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bxs-edit-alt'></i> Clase de Bien</a>
+            <a [routerLink]="['estados_bienes']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bx-signal-4'></i> Estado de Bien</a>
+            <a [routerLink]="['marcas']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bx-world'></i> Marcas</a>
+            <a [routerLink]="['proveedores']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bx-group'></i> Proveedores</a>
+            <a [routerLink]="['usuarios']"class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bx-user' ></i> Usuarios</a>
+            <h6>>>Operacion</h6>
+            <a [routerLink]="['bienes']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bxs-flag-alt'></i> Cargar Bienes</a>
+            <a [routerLink]="['transferir_bienes']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bx-transfer-alt'></i> Transferir Bienes</a>
+            <a [routerLink]="['empleados']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bxs-buildings'></i> Empleados</a>
+            <a [routerLink]="['administracion']" class="list-group-item list-group-item-action" routerLinkActive="active"><i class='bx bxs-buildings'></i> Administracion</a>
+        </div>
+    </div>
+    <div class="col-9">
+        <router-outlet></router-outlet>
+
+    </div>
+
+</div>

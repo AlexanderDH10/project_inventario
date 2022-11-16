@@ -1,0 +1,291 @@
+<div class="row">
+    <div class="col-6">
+        <h1>Cargar Bienes</h1>
+        <form #bienForm="ngForm" (ngSubmit)="agregarBien(bienForm)" class="">
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput">Año de Afectacion:</label>
+                    <input [readonly]="bloquear" name="Año de Afectacion" [(ngModel)]="_cargarBienService.selectedBien['Año de Afectacion']"
+                        type="text" class="form-control" placeholder="Año de Afectacion">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput">Folio:</label>
+                    <input [readonly]="bloquear" name="Folio" [(ngModel)]="_cargarBienService.selectedBien.Folio" type="text"
+                        class="form-control" placeholder="Folio">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput">Clave CABMS:</label>
+                    <input  #claveCabms (blur)="cargarCabms(claveCabms.value)" [readonly]="bloquear" name="Clave CABMS" [(ngModel)]="_cargarBienService.selectedBien['Clave CABMS']" type="text" class="form-control" placeholder="Clave CABMS">
+                </div>
+            </div>
+
+
+
+            <label for="formGroupExampleInput">Descripcion CABMS:</label>
+            <textarea [readonly]="bloquear" name="Descripcion CABMS" [(ngModel)]="_cargarBienService.selectedBien['Descripcion CABMS']"
+                class="form-control" id="exampleFormControlTextarea1" rows="3"
+                placeholder="Descripcion CABMS..."></textarea>
+
+            <!--
+                <label for="formGroupExampleInput">Descripcion Especifica:</label>
+            <textarea name="desc_" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                placeholder="Descripcion Especifica..."></textarea>
+           
+
+            <label for="formGroupExampleInput">Folio:</label>
+            <input name="Folio" type="text" class="form-control" placeholder="Folio">
+             -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Valor:</label>
+                    <label class="sr-only" for="inlineFormInputGroupUsername">0</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">$</div>
+                        </div>
+                    <input [readonly]="bloquear" name="Valor" type="text" [(ngModel)]="_cargarBienService.selectedBien.Valor" class="form-control"
+                        id="inlineFormInputGroupUsername" placeholder="0">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Unidad Responsable:</label>
+                    <select [disabled]="!true" name="Unidad Responsable" [(ngModel)]="_cargarBienService.selectedBien['Unidad Responsable']"
+                        id="inputState" class="form-control">
+                        <option value="" selected="selected">Seleccionar</option>
+                        <option selected [value]="unidad.clave_ur" *ngFor="let unidad of unidades">{{unidad.clave_ur}}</option>
+                    
+                    </select>
+                    <!--
+                    <input [readonly]="bloquear" name="Unidad Responsable" [(ngModel)]="_cargarBienService.selectedBien['Unidad Responsable']"
+                    type="text" class="form-control" placeholder="Ejemplo: 100-1">
+                    -->
+                </div>
+
+                
+
+            </div>
+            <!--
+            <label for="formGroupExampleInput">Unidad Administrativa (SAI):</label>
+            <input name="Clave UR SAI" type="text" [(ngModel)]="_cargarBienService.selectedBien['Clave UR SAI']" class="form-control" placeholder="Ejemplo: A020">
+
+            <label for="formGroupExampleInput">Unidad Responsable (SMAI):</label>
+            <input name="Clave UR SMAI" type="text" class="form-control" [(ngModel)]="_cargarBienService.selectedBien['Clave UR SAI']"  placeholder="Ejemplo: SG100">
+            -->
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput">No. Empleado:</label>
+                    <input [readonly]="bloquear" name="No Empleado" type="text" [(ngModel)]="_cargarBienService.selectedBien['No Empleado']" class="form-control" placeholder="No. Empleado">
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="formGroupExampleInput">Nombre del Empleado:</label>
+                    <input [readonly]="bloquear" name="Nombre Empleado" type="text" [(ngModel)]="_cargarBienService.selectedBien['Nombre Empleado']" class="form-control" placeholder="Nombre del Empleado">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput">Status del Bien:</label>
+                    <select [disabled]="!true" name="Status del Bien" [(ngModel)]="_cargarBienService.selectedBien['Status del Bien']"
+                        id="inputState" class="form-control">
+                        <option selected value="Activa">Activa</option>
+                        <option value="Inactiva">Inactiva</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput">Modelo:</label>
+                    <input [readonly]="bloquear" name="Modelo" type="text" [(ngModel)]="_cargarBienService.selectedBien.Modelo" class="form-control" placeholder="Modelo">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput">Serie:</label>
+                    <input [readonly]="bloquear" name="Serie" type="text" [(ngModel)]="_cargarBienService.selectedBien.Serie" class="form-control"
+                    placeholder="Serie">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Marca:</label>
+                    <input [readonly]="bloquear" name="Marca" type="text" [(ngModel)]="_cargarBienService.selectedBien.Marca" class="form-control" placeholder="Marca">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Proveedor:</label>
+                    <input [readonly]="bloquear" name="Proveedor" type="text" [(ngModel)]="_cargarBienService.selectedBien.Proveedor" class="form-control" placeholder="Proveedor">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                <label for="formGroupExampleInput">Orden de Compra:</label>
+                <input [readonly]="bloquear" name="Orden de Compra" type="text" [(ngModel)]="_cargarBienService.selectedBien['Orden de Compra']"
+                    class="form-control" placeholder="Orden de Compra">
+                </div>
+                <div class="form-group col-md-6">
+                <label for="formGroupExampleInput">No. de Factura:</label>
+                <input [readonly]="bloquear" name="Numero de Factura" type="text"
+                    [(ngModel)]="_cargarBienService.selectedBien['Numero de Factura']" class="form-control"
+                    placeholder="No. de Factura">
+            </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Estado del Bien:</label>
+                    <select [disabled]="!true" name="Estado del Bien" [(ngModel)]="_cargarBienService.selectedBien['Estado del Bien']"
+                        id="inputState" class="form-control">
+                        <option selected>Regular</option>
+                        <option>Bien</option>
+                        <option>Mal</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Tipo de Ingreso:</label>
+                    <input [readonly]="bloquear" name="Tipo de Ingreso" type="text" [(ngModel)]="_cargarBienService.selectedBien['Tipo de Ingreso']"
+                        class="form-control" placeholder="Tipo de Ingreso">
+                </div>
+            </div>
+
+            <label for="formGroupExampleInput">Ubicacion:</label>
+            <input [readonly]="bloquear" name="Ubicacion" type="text" [(ngModel)]="_cargarBienService.selectedBien.Ubicacion"
+                class="form-control" placeholder="Ubicacion">
+            
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Edificio:</label>
+                    <input [readonly]="bloquear" name="Edificio" type="text" class="form-control"
+                        [(ngModel)]="_cargarBienService.selectedBien.Edificio" placeholder="Edificio">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Piso:</label>
+                    <input [readonly]="bloquear" name="Piso" type="text" [(ngModel)]="_cargarBienService.selectedBien.Piso" class="form-control"
+                        placeholder="Piso">
+                </div>
+                
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Partida Presupuestal:</label>
+                    <input [readonly]="bloquear" name="Partida Presupuestal" type="text"
+                        [(ngModel)]="_cargarBienService.selectedBien['Partida Presupuestal']" class="form-control"
+                        placeholder="Partida Presupuestal">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Subcuenta:</label>
+                    <input [readonly]="bloquear" name="Subcuenta" type="text" [(ngModel)]="_cargarBienService.selectedBien.Subcuenta"
+                        class="form-control" placeholder="Subcuenta">
+                </div>
+            </div>
+
+            <!--
+            <label for="formGroupExampleInput">Proveedor:</label>
+            <select id="inputState" class="form-control">
+                <option selected>Sin Proveedor</option>
+                <option>...</option>
+            </select>
+            -->
+
+            <div class="row mt-3">
+                <div class="col-6">
+                    <button class="btn btn-primary mr-3">Guardar</button>
+                    <button type="button" (click)="limpiar(bienForm)" class="btn btn-danger">Limpiar</button>
+                </div>
+            </div>
+        </form>
+            
+    </div>
+    <div *ngIf="alert == true" class="col-6">
+        <div class="alert alert-success" role="alert">
+            Bien Almacenado!
+        </div>
+
+        <h1>Datos cargados</h1>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <p><label class="font-weight-bold" >Año de Afectacion:</label> {{ _cargarBienService.selectedBien['Año de Afectacion']}} </p>
+            </div>
+            <div class="form-group col-md-4">
+                <p><label class="font-weight-bold" >Folio:</label> {{ _cargarBienService.selectedBien.Folio }}</p>
+            </div>
+            <div class="form-group col-md-4">
+                <p><label class="font-weight-bold" >Clave CABMS:</label> {{ _cargarBienService.selectedBien['Clave CABMS']}}</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <p><label class="font-weight-bold" >Descripcion:</label> {{ _cargarBienService.selectedBien['Descripcion CABMS']}}</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Valor:</label> {{ _cargarBienService.selectedBien.Valor}}</p>
+            </div>
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Unidad Responsable:</label> {{_cargarBienService.selectedBien['Unidad Responsable']}}</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >No. de Empleado:</label> {{ _cargarBienService.selectedBien['No Empleado']}}</p>
+            </div>
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Nombre de Empleado:</label> {{ _cargarBienService.selectedBien['Nombre Empleado']}}</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <p><label class="font-weight-bold" >Status del Bien:</label> {{ _cargarBienService.selectedBien['Status del Bien']}}</p>
+            </div>
+            <div class="form-group col-md-4">
+                <p><label class="font-weight-bold" >Modelo:</label> {{ _cargarBienService.selectedBien.Modelo}}</p>
+            </div>
+            <div class="form-group col-md-4">
+                <p><label class="font-weight-bold" >Serie:</label> {{ _cargarBienService.selectedBien.Serie}}</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Marca:</label> {{ _cargarBienService.selectedBien.Marca}}</p>
+            </div>
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Proveedor:</label> {{ _cargarBienService.selectedBien.Proveedor}}</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Orden de Compra:</label> {{ _cargarBienService.selectedBien['Orden de Compra']}}</p>
+            </div>
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >No. de Factura:</label> {{ _cargarBienService.selectedBien['Numero de Factura']}}</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Estado de bien:</label> {{ _cargarBienService.selectedBien['Estado del Bien']}}</p>
+            </div>
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Tipo de Ingreso:</label> {{ _cargarBienService.selectedBien['Tipo de Ingreso']}}</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <p><label class="font-weight-bold" >Ubicacion:</label> {{ _cargarBienService.selectedBien.Ubicacion}}</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Edificio:</label> {{ _cargarBienService.selectedBien.Edificio}}</p>
+            </div>
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Piso:</label> {{ _cargarBienService.selectedBien.Piso}}</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Partida Presupuestal:</label> {{ _cargarBienService.selectedBien['Partida Presupuestal']}}</p>
+            </div>
+            <div class="form-group col-md-6">
+                <p><label class="font-weight-bold" >Subcuenta:</label> {{ _cargarBienService.selectedBien.Subcuenta}}</p>
+            </div>
+        </div>
+
+
+    </div>
+</div>

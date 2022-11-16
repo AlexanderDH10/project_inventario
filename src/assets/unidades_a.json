@@ -1,0 +1,436 @@
+[
+ {
+  "numero": 1,
+  "clave_ur": 100,
+  "clave_ur_sai": "A010",
+  "clave_ur_smai": "SG100",
+  "nombre": "Oficina del C. Secretario de Gobernacion"
+ },
+ {
+  "numero": 2,
+  "clave_ur": "100-1",
+  "clave_ur_sai": "A020",
+  "clave_ur_smai": "SG100-1",
+  "nombre": "Organo Interno de Control "
+ },
+ {
+  "numero": 3,
+  "clave_ur": 130,
+  "clave_ur_sai": "B030",
+  "clave_ur_smai": "SG130",
+  "nombre": "Unidad General de Asuntos Jclave_uridicos "
+ },
+ {
+  "numero": 4,
+  "clave_ur": 131,
+  "clave_ur_sai": "B031",
+  "clave_ur_smai": "SG131",
+  "nombre": "Direccion General de lo Consultivo y de Contratos y Convenios"
+ },
+ {
+  "numero": 5,
+  "clave_ur": 132,
+  "clave_ur_sai": "B032",
+  "clave_ur_smai": "SG132",
+  "nombre": "Direccion General de lo Contencioso "
+ },
+ {
+  "numero": 6,
+  "clave_ur": 133,
+  "clave_ur_sai": "B033",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General de Procedimientos Constitucionales "
+ },
+ {
+  "numero": 7,
+  "clave_ur": 200,
+  "clave_ur_sai": "B010",
+  "clave_ur_smai": "SG200",
+  "nombre": "Subsecretaria de Gobierno [B010]"
+ },
+ {
+  "numero": 8,
+  "clave_ur": 211,
+  "clave_ur_sai": "B020",
+  "clave_ur_smai": "",
+  "nombre": "Unidad de Gobierno "
+ },
+ {
+  "numero": 9,
+  "clave_ur": 212,
+  "clave_ur_sai": "B040",
+  "clave_ur_smai": "",
+  "nombre": "Unidad para la Atencion de las Organizaciones Sociales "
+ },
+ {
+  "numero": 10,
+  "clave_ur": 214,
+  "clave_ur_sai": "B050",
+  "clave_ur_smai": "",
+  "nombre": "Unidad de Enlace Federal y Coordinacion con Entidades Federativas"
+ },
+ {
+  "numero": 11,
+  "clave_ur": 215,
+  "clave_ur_sai": "B080",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General de Juegos y Sorteos "
+ },
+ {
+  "numero": 12,
+  "clave_ur": 216,
+  "clave_ur_sai": "B090",
+  "clave_ur_smai": "",
+  "nombre": "Unidad de Politica Interior y Analisis de Informacion "
+ },
+ {
+  "numero": 13,
+  "clave_ur": 217,
+  "clave_ur_sai": "B100",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General de Analisis y Prospectiva para la Politica Interior "
+ },
+ {
+  "numero": 14,
+  "clave_ur": 219,
+  "clave_ur_sai": "B110",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General de Evaluacion de Escenarios Gubernamentales "
+ },
+ {
+  "numero": 15,
+  "clave_ur": 220,
+  "clave_ur_sai": "B120",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General Regional Sclave_ureste "
+ },
+ {
+  "numero": 16,
+  "clave_ur": 222,
+  "clave_ur_sai": "B122",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General Regional Noroeste y Occidente "
+ },
+ {
+  "numero": 17,
+  "clave_ur": 221,
+  "clave_ur_sai": "B121",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General Regional Centro y Noreste "
+ },
+ {
+  "numero": 18,
+  "clave_ur": 223,
+  "clave_ur_sai": "B123",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General de Enlace y Seguimiento "
+ },
+ {
+  "numero": 19,
+  "clave_ur": 230,
+  "clave_ur_sai": "E030",
+  "clave_ur_smai": "SG230",
+  "nombre": "Unidad de Enlace "
+ },
+ {
+  "numero": 20,
+  "clave_ur": 231,
+  "clave_ur_sai": "J020",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General de Informacion Legislativa "
+ },
+ {
+  "numero": 21,
+  "clave_ur": 232,
+  "clave_ur_sai": "A030",
+  "clave_ur_smai": "SG232",
+  "nombre": "Direccion General de Estudios Legislativos "
+ },
+ {
+  "numero": 22,
+  "clave_ur": 270,
+  "clave_ur_sai": "G010",
+  "clave_ur_smai": "SG270",
+  "nombre": "Unidad de Normatividad de Medios de Comunicacion "
+ },
+ {
+  "numero": 23,
+  "clave_ur": "270-1",
+  "clave_ur_sai": "A040",
+  "clave_ur_smai": "SG270-1",
+  "nombre": "Direccion General de Comunicacion Social"
+ },
+ {
+  "numero": 24,
+  "clave_ur": 271,
+  "clave_ur_sai": "G020",
+  "clave_ur_smai": "SG271",
+  "nombre": "Direccion General de Radio, Television y Cinematografia"
+ },
+ {
+  "numero": 25,
+  "clave_ur": 272,
+  "clave_ur_sai": "G030",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General de Normatividad de Comunicacion "
+ },
+ {
+  "numero": 26,
+  "clave_ur": 273,
+  "clave_ur_sai": "G040",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General de Medios Impresos "
+ },
+ {
+  "numero": 27,
+  "clave_ur": 500,
+  "clave_ur_sai": "O010",
+  "clave_ur_smai": "SG500",
+  "nombre": "Subsecretaria de Desarrollo Democratico, Participacion Social y Asuntos Religiosos"
+ },
+ {
+  "numero": 28,
+  "clave_ur": 510,
+  "clave_ur_sai": "E010",
+  "clave_ur_smai": "",
+  "nombre": "Unidad de Desarrollo Democratico "
+ },
+ {
+  "numero": 29,
+  "clave_ur": 515,
+  "clave_ur_sai": "O060",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General de Cultclave_ura Democratica y Fomento Civico "
+ },
+ {
+  "numero": 30,
+  "clave_ur": 516,
+  "clave_ur_sai": "O040",
+  "clave_ur_smai": "SG516",
+  "nombre": "Direccion General de Vinculacion con Organizaciones de la Sociedad Civil "
+ },
+ {
+  "numero": 31,
+  "clave_ur": 520,
+  "clave_ur_sai": "O070",
+  "clave_ur_smai": "",
+  "nombre": "Unidad de Construccion de Ciudadania y Participacion Social "
+ },
+ {
+  "numero": 32,
+  "clave_ur": 521,
+  "clave_ur_sai": "O050",
+  "clave_ur_smai": "SG521",
+  "nombre": "Direccion General de Construccion de Ciudadania y Participacion Social"
+ },
+ {
+  "numero": 33,
+  "clave_ur": 522,
+  "clave_ur_sai": "O030",
+  "clave_ur_smai": "SG522",
+  "nombre": "Direccion General de Coordinacion Interinstitucional "
+ },
+ {
+  "numero": 34,
+  "clave_ur": 540,
+  "clave_ur_sai": "O080",
+  "clave_ur_smai": "",
+  "nombre": "Unidad de Asuntos Religiosos, Prevencion y la Reconstruccion del Tejido Social"
+ },
+ {
+  "numero": 35,
+  "clave_ur": 541,
+  "clave_ur_sai": "F020",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General de Asuntos Religiosos"
+ },
+ {
+  "numero": 36,
+  "clave_ur": 542,
+  "clave_ur_sai": "O020",
+  "clave_ur_smai": "SG542",
+  "nombre": "Direccion General de Prevencion Social del Delito y la Reconstruccion del Tejido Social del Delito "
+ },
+ {
+  "numero": 37,
+  "clave_ur": 800,
+  "clave_ur_sai": "H010",
+  "clave_ur_smai": "SG800",
+  "nombre": "Unidad de Administracion y Finanzas"
+ },
+ {
+  "numero": 38,
+  "clave_ur": 810,
+  "clave_ur_sai": "H020",
+  "clave_ur_smai": "SG810",
+  "nombre": "Direccion General de Recclave_ursos Humanos "
+ },
+ {
+  "numero": 39,
+  "clave_ur": 811,
+  "clave_ur_sai": "H030",
+  "clave_ur_smai": "SG811",
+  "nombre": "Direccion General de Programacion y Presupuesto "
+ },
+ {
+  "numero": 40,
+  "clave_ur": 812,
+  "clave_ur_sai": "H040",
+  "clave_ur_smai": "812",
+  "nombre": "Direccion General de Recclave_ursos Materiales y Servicios Generales "
+ },
+ {
+  "numero": 41,
+  "clave_ur": 813,
+  "clave_ur_sai": "H050",
+  "clave_ur_smai": "SG813",
+  "nombre": "Direccion General de Tecnologias de la Informacion y Comunicaciones "
+ },
+ {
+  "numero": 42,
+  "clave_ur": 900,
+  "clave_ur_sai": "K010",
+  "clave_ur_smai": "SG900",
+  "nombre": "Subsecretaria de Derechos Humanos, Poblacion y Migracion "
+ },
+ {
+  "numero": 43,
+  "clave_ur": 901,
+  "clave_ur_sai": "A080",
+  "clave_ur_smai": "SG901",
+  "nombre": "Comision para el Dialogo con los Pueblos Indigenas de Mexico "
+ },
+ {
+  "numero": 44,
+  "clave_ur": 911,
+  "clave_ur_sai": "K020",
+  "clave_ur_smai": "SG911",
+  "nombre": "Unidad para la Defensa de los Derechos Humanos "
+ },
+ {
+  "numero": 45,
+  "clave_ur": 913,
+  "clave_ur_sai": "K040",
+  "clave_ur_smai": "SG913",
+  "nombre": "Direccion General de Politica Publica de Derechos Humanos "
+ },
+ {
+  "numero": 46,
+  "clave_ur": 914,
+  "clave_ur_sai": "K050",
+  "clave_ur_smai": "SG914",
+  "nombre": "Direccion General de Estrategias para la Atencion de Derechos Humanos "
+ },
+ {
+  "numero": 47,
+  "clave_ur": 915,
+  "clave_ur_sai": "K080",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General para la Proteccion de Personas Defensoras de Derechos Humanos y Periodistas"
+ },
+ {
+  "numero": 48,
+  "clave_ur": 920,
+  "clave_ur_sai": "Q00",
+  "clave_ur_smai": "SG920",
+  "nombre": "Unidad de Apoyo al Sistema de Justicia "
+ },
+ {
+  "numero": 49,
+  "clave_ur": 921,
+  "clave_ur_sai": "Q010",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General para el Fortalecimiento de los Tribunales Superiores y las Procclave_uradclave_urias Estatales "
+ },
+ {
+  "numero": 50,
+  "clave_ur": 922,
+  "clave_ur_sai": "Q020",
+  "clave_ur_smai": "",
+  "nombre": "Direccion General para la Reconciliacion y Justicia "
+ },
+ {
+  "numero": 51,
+  "clave_ur": 940,
+  "clave_ur_sai": "D030",
+  "clave_ur_smai": "SG940",
+  "nombre": "Unidad de Politica Migratoria, Registro e Identidad de  Personas"
+ },
+ {
+  "numero": 52,
+  "clave_ur": 941,
+  "clave_ur_sai": "D020",
+  "clave_ur_smai": "SG941",
+  "nombre": "Direccion General del Registro Nacional de Poblacion e Identidad"
+ },
+ {
+  "numero": 53,
+  "clave_ur": "A00",
+  "clave_ur_sai": "I010",
+  "clave_ur_smai": "",
+  "nombre": "Instituto Nacional para el Federalismo y el Desarrollo Municipal "
+ },
+ {
+  "numero": 54,
+  "clave_ur": "F00",
+  "clave_ur_sai": "I060",
+  "clave_ur_smai": "SGF00",
+  "nombre": "Tribunal Federal de Conciliacion y Arbitraje "
+ },
+ {
+  "numero": 55,
+  "clave_ur": "G00",
+  "clave_ur_sai": "I070",
+  "clave_ur_smai": "",
+  "nombre": "Secretaria General del Consejo Nacional de Poblacion"
+ },
+ {
+  "numero": 56,
+  "clave_ur": "K00",
+  "clave_ur_sai": "I100",
+  "clave_ur_smai": "",
+  "nombre": "Instituto Nacional de Migracion"
+ },
+ {
+  "numero": 57,
+  "clave_ur": "N00",
+  "clave_ur_sai": "I130",
+  "clave_ur_smai": "SGN00",
+  "nombre": "Coordinacion General de la Comision Mexicana de Ayuda a Refugiados"
+ },
+ {
+  "numero": 58,
+  "clave_ur": "P00",
+  "clave_ur_sai": "P010",
+  "clave_ur_smai": "SGP00",
+  "nombre": "Secretaria Ejecutiva del Sistema Nacional de Proteccion Integral de Niñas, Niños y Adolescentes "
+ },
+ {
+  "numero": 59,
+  "clave_ur": "Q00",
+  "clave_ur_sai": "I160",
+  "clave_ur_smai": "SGQ00",
+  "nombre": "Centro de Produccion de Programas Informativos y Especiales "
+ },
+ {
+  "numero": 60,
+  "clave_ur": "T00",
+  "clave_ur_sai": "T00",
+  "clave_ur_smai": "SGT00",
+  "nombre": "Coordinacion para la Atencion Integral de la Migracion en la Frontera Sclave_ur"
+ },
+ {
+  "numero": 61,
+  "clave_ur": "V00",
+  "clave_ur_sai": "I200",
+  "clave_ur_smai": "SGV00",
+  "nombre": "Comision Nacional para Prevenir y Erradicar la Violencia contra las Mujeres "
+ },
+ {
+  "numero": 62,
+  "clave_ur": "X00",
+  "clave_ur_sai": "X00",
+  "clave_ur_smai": "SGX00",
+  "nombre": "Comision Nacional de Busqueda de Personas"
+ }
+]

@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-5">
+
+    <h1 class="animated fadeIn">Unidades Administrativas</h1>
+
+    <div class="form animated fadeIn fast">
+      <label>Buscar Unidad Admnistrativa (U.A):</label>
+      <input class="form-control form-control-sm mr-sm-2" type="text" placeholder="Buscar Unidad Admnistrativa (U.A)" autocomplete="on" (keyup.enter)="buscarUnidad(buscarTexto.value.toString())" #buscarTexto>
+      <button class="btn btn-outline-success mt-2 mr-2 mb-4" type="button" (click)="buscarUnidad( buscarTexto.value.toString())">Buscar</button>
+    </div>
+
+    <h1>Cargar Unidades</h1>
+    <div *ngIf="alert == true" >
+      <div class="alert alert-success" role="alert">
+          Unidad '{{nombreUnidad}}' Almacenada!
+      </div>
+    </div>
+
+    <form #unidadForm="ngForm" (ngSubmit)="agregarUnidad(unidadForm)" class="form animated fadeIn fast">
+      <div class="form-group ">
+        <label for="inputEmail4">Clave Unidad Administrativa (U.A):</label>
+        <input type="text" name="clave_ur" class="form-control form-control-sm" placeholder="Clave Unidad Administrativa (U.A)" [(ngModel)]="_uasServices.selectedUnidad.clave_ur">
+      </div>
+
+      <div class="form-group">
+        <label for="inputEmail4">Nombre Unidad Administrativa:</label>
+        <input type="text" class="form-control form-control-sm" name="nombre" placeholder="Nombre Unidad Administrativa" id="" [(ngModel)]="_uasServices.selectedUnidad.nombre">
+      </div>
+
+
+      <div class="form-group">
+        <label>Clave SMAI:</label>
+        <input type="text" class="form-control form-control-sm" id="" placeholder="Clave SMAI" name="clave_ur_smai" [(ngModel)]="_uasServices.selectedUnidad.clave_ur_smai">
+      </div>
+
+      <div class="form-group">
+        <label>Clave SAI:</label>
+        <input type="text" class="form-control form-control-sm" id="" placeholder="Clave SAI" name="clave_ur_sai" [(ngModel)]="_uasServices.selectedUnidad.clave_ur_sai">
+      </div>
+
+      <div class="form-row">
+
+        
+      </div>
+
+      <div class="form-group">
+        <label>Comentarios:</label>
+        <textarea class="form-control" id="" rows="3" placeholder="Comentarios..." name="comentarios" [(ngModel)]="_uasServices.selectedUnidad.comentarios"></textarea>
+      </div>
+
+      <button class="btn btn-primary"><i class='bx bxs-save'></i>Guardar</button>
+    </form>
+
+  </div>
+  
+</div>
