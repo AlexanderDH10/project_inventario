@@ -82,9 +82,11 @@ export class TransferirBienesComponent implements OnInit {
       this.transferir = false;
       this.busquedaEmpleado = true;
       this.datosTransfer = {
+
         Folio: this.folioBien,
         noEmpleado: this.empleado_data.no_empleado,
         nombreEmpleado: this.empleado_data.nombre
+        
       }
       
 

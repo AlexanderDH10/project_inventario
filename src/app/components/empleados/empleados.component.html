@@ -1,113 +1,28 @@
 <h1>Catalogo de Empleados</h1>
+
 <div class="row">
-  <div class="col-6">
-    <form class="form">
-      <label>Numero de Empleado:</label>
-      <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Numero de Empleado" aria-label="Search">
-      <button class="btn btn-outline-success mt-2 mr-2 mb-4" type="submit">Buscar</button>
+  <div class="col">
+    <form #addEmpleadoForm="ngForm" (ngSubmit)="agregarEmpleado(addEmpleadoForm)">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label >Nombre Completo:</label>
+          <input name="nombre" [(ngModel)]="_empleadoService.Empleado.nombre" type="text" class="form-control form-control-sm" id="" placeholder="Nombre(s)"  style="text-transform:uppercase">
+        </div>
+        <div class="form-group col-md-4">
+          <label>Numero de Empleado:</label>
+          <input name="no_empleado" [(ngModel)]="_empleadoService.Empleado.no_empleado" type="text" class="form-control form-control-sm" id="" placeholder="Numero de Empleado"  style="text-transform:uppercase">
+        </div>
+        <div class="form-group col-md-4">
+          <label>Unidad Administrativa:</label>
+          <input name="unidad_ad" [(ngModel)]="_empleadoService.Empleado.unidad_ad" type="text" class="form-control form-control-sm" id="" placeholder="Unidad Administrativa" style="text-transform:uppercase">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <button class="btn btn-outline-success mt-2 mr-2 mb-4">Agregar Empleado</button>
+          </div>
+        </div>
+      </div>
     </form>
   </div>
 </div>
-
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-4">
-      <label >Nombre(s):</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="Nombre(s)">
-    </div>
-    <div class="form-group col-md-4">
-      <label>Primer Apellido:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="Primer Apellido">
-    </div>
-    <div class="form-group col-md-4">
-      <label>Segundo Apellido:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="Segundo Apellido">
-    </div>
-  </div>
-  <div class="form-group">
-    <label>Unidad Administrativa:</label>
-    <input type="text" class="form-control form-control-sm" id="" placeholder="Unidad Administrativa">
-  </div>
-  <div class="form-group">
-    <label>Nivel de Puesto:</label>
-    <input type="text" class="form-control form-control-sm col-4" id="" placeholder="Nivel de Puesto">
-  </div>
-
-  <div class="form-row">
-    <div class="form-group col-md-4">
-      <label>RFC:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="RFC">
-    </div>
-    <div class="form-group col-md-4">
-      <label>CURP:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="CURP">
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="form-group col-md-4">
-      <label>Fecha de Nacimiento:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="Fecha de Nacimiento">
-    </div>
-    <div class="form-group col-md-4">
-      <label>Fecha de Ingreso:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="Fecha de Ingreso">
-    </div>
-    <div class="form-group col-md-4">
-      <label>Ingreso al Area:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="Ingreso al Area">
-    </div>
-  </div>
-
-
-  <div class="form-row">
-    <div class="form-group col-md-8">
-      <label>Edificio:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="Edificio">
-    </div>
-    <div class="form-group col-md-4">
-      <label>Piso:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="Piso">
-    </div>
-  </div>
-
-
-  <div class="form-row">
-    <div class="form-group col-md-4">
-      <label>Telefono:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="Telefono">
-    </div>
-    <div class="form-group col-md-4">
-      <label>Extension:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="Extension">
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="form-group col-md-8">
-      <label>Referencia:</label>
-      <input type="text" class="form-control form-control-sm" id="" placeholder="Referencia">
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="form-group col-md-3">
-      <label>Estatus:</label>
-      <div class="p-3 mb-2 bg-success text-white">Activo</div>
-    </div>
-  </div>
-</form>
 <hr>
-<h1>Opciones de Empleados</h1>
-<div>
-  <i class='bx bx-notepad'></i> <a href="#" class="alert-link">Ver notas Asignadas al Empleado</a>
-</div>
-<div>
-  <i class='bx bx-basket'></i><a href="#" class="alert-link">Resguardo</a> <p class="text-success">|| BIENES ASIGNADOS</p>
-</div>
-<div>
-  <i class='bx bx-plus'></i><a href="#" class="alert-link">Asignar bienes al empleado</a>
-</div>
-<div>
-  <i class='bx bx-chevrons-down' ></i><a href="#" class="alert-link">Quitar bienes</a>
-</div>
